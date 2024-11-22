@@ -61,7 +61,7 @@ vi. Test if classes are balanced in the MNIST dataset
 vii. Test data integrity and statistical properties
 
 6. 10 Augmented Images from MNIST by adding Noise, Rotated, Change brightness
-![Images](all_digit_augmentation.png)
+![Images](/all_digit_augmentation.png)
 
 
 
