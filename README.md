@@ -1,3 +1,6 @@
+![Build Status](https://github.com/monimoyd/ml_training_ci_cd_pipeline_advanced/actions/workflows/ml-pipeline.yml/badge.svg)
+
+
 Steps to run locally:
 1. Create a virtual environment:
 Bash
@@ -13,7 +16,7 @@ python src/train.py
 
 4.Run tests:
 Bash
-python -m unittest tests/test_model.py
+pytest tests/test_model.py -v
 
 5. To deploy to GitHub:
 i. Create a new repository on GitHub
@@ -30,10 +33,19 @@ i. Set up a Python environment
 ii.Install dependencies
 iii.Train the model
 iv. Run all tests
+
 v.Save the trained model as an artifact
+
 The tests check for:
 i. Model parameter count (< 25000)
 ii.Input shape compatibility (28x28)
 iii.Model accuracy (> 95%)
-The model file is saved with a timestamp suffix (e.g., model_20240321_143022.pth) for tracking when it was trained.
-Note: You might need to adjust the accuracy threshold in the tests if the model doesn't achieve 95% accuracy in one epoch. You could either train for more epochs or lower the threshold for the CI/CD pipeline to pass.
+iv. Test rotation invariance of model
+v. Test the size and shape of MNIST dataset
+vi. Test if classes are balanced in the MNIST dataset
+vii. Test data integrity and statistical properties
+
+6. Augemented Images from MNIST
+![Build Status](https://github.com/monimoyd/ml_training_ci_cd_pipeline_advanced/all_digit_augmentation.png)
+
+
