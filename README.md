@@ -1,5 +1,3 @@
-![Build Status](https://github.com/monimoyd/ml_training_ci_cd_pipeline_advanced/actions/workflows/ml-pipeline.yml/badge.svg)
-
 # Steps to run locally:
 ## 1. Create a virtual environment:
 Bash
@@ -51,17 +49,6 @@ i. Model parameter count (< 25000)
 ii.Input shape compatibility (28x28)
 
 iii.Model accuracy (> 95%)
-
-iv. Test rotation invariance of model
-
-v. Test the size and shape of MNIST dataset
-
-vi. Test if classes are balanced in the MNIST dataset
-
-vii. Test data integrity and statistical properties
-
-6. 10 Augmented Images from MNIST by adding Noise, Rotated, Change brightness
-![Images](/all_digit_augmentation.png)
 
 
 
